@@ -5,7 +5,7 @@
 ### Setup
 1. Clone the repository
 ```
-git clone https://github.com/Eruditenurj/mentat.git
+git clone https://github.com/Eruditenurj/erudite-mentat.git
 ```
 1. Go to erudite-mentat directory
 ```
