@@ -7,7 +7,11 @@
 ```
 git clone https://github.com/Eruditenurj/mentat.git
 ```
-2. Setup virtual environment (install necessary packages)
+1. Go to erudite-mentat directory
+```
+cd erudite-mentat
+```
+3. Setup virtual environment (install necessary packages)
 ```
 python -m venv env
 source env/bin/activate
