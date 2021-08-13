@@ -1,0 +1,9 @@
+# virtual environment
+env
+
+# python cache files
+*.pyc
+__pycache__/
+
+# user uploaded files
+uploads/
