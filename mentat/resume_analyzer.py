@@ -15,6 +15,7 @@ def find_keywords(filename):
 def get_allowed_keywords():
     # read the oppurtunities file get an unique set of all the keywords in all
     # of the rows
+    # first part of function code
     pass
 
 if __name__ == "__main__":
