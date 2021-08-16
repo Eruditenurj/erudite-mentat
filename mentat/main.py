@@ -59,5 +59,5 @@ def display_recommendations():
         keywords = args["keyword"]
     else:
         keywords = []
-    opportunities = get_recommended_oppurtunities(keywords)
+    opportunities = get_recommended_opportunities(keywords)
     return render_template("recommendations.html", opportunities=opportunities)
