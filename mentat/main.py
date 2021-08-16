@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import os
 
 from resume_analyzer import find_keywords
-from recommender import get_recommended_oppurtunities
+from recommender import get_recommended_opportunities
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -59,5 +59,5 @@ def display_recommendations():
         keywords = args["keyword"]
     else:
         keywords = []
-    oppurtunities = get_recommended_oppurtunities(keywords)
-    return render_template("recommendations.html", oppurtunities=oppurtunities)
+    opportunities = get_recommended_oppurtunities(keywords)
+    return render_template("recommendations.html", opportunities=opportunities)

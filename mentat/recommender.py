@@ -1,8 +1,8 @@
 import sys
 
-# calculates which oppurtunities most aligns with the given keywords
-# returns a list of oppurtunities
-def get_recommended_oppurtunities(keywords):
+# calculates which opportunities most aligns with the given keywords
+# returns a list of opportunities
+def get_recommended_opportunities(keywords):
     # example return:
     return [
         {
@@ -25,5 +25,5 @@ def get_recommended_oppurtunities(keywords):
 
 if __name__ == "__main__":
     keywords = sys.argv[1:]
-    oppurtunities = get_recommended_oppurtunities(keywords)
+    oppurtunities = get_recommended_opportunities(keywords)
     print(oppurtunities)
