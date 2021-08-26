@@ -30,21 +30,15 @@ def find_keywords(filename):
 def get_allowed_keywords():
 	# read the oppurtunities file get an unique set of all the keywords in all
 	# of the rows
-
 	unique_keywords = []
-
 	with open (OPPORTUNITIES_FILENAME) as csvfile:
 		csv_reader = csv.reader(csvfile, delimiter=',',quotechar='"')
+		next(csv_reader)
 		for row in csv_reader:
-			count = 0
-			temporary_keywords=[row[15]]
-			for x in temporary_keywords:
-				for y in unique_keywords:
-					if x == y:
-						continue
-				unique_keywords.append(x)
-			count = count + 1
-
+			keywords = row[14].split(',')
+			for keyword in keywords:
+				if keyword not in unique_keywords:
+					unique_keywords.append(keyword.strip())
 	return unique_keywords
 
 if __name__ == "__main__":
