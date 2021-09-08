@@ -10,7 +10,6 @@ def find_keywords(filename):
 
 	# load list of allowed_keywords
 	allowed_keywords = get_allowed_keywords()
-	print("allowed_keywords", allowed_keywords)
 
 	# load and read pdf
 	doc = fitz.open(filename)
@@ -41,7 +40,25 @@ def get_allowed_keywords():
 					unique_keywords.append(keyword.strip())
 	return unique_keywords
 
+def get_opportunities():
+	opportunities = []
+	with open(OPPORTUNITIES_FILENAME) as csvfile:
+		csv_reader = csv.reader(csvfile,delimiter=',',quotechar='"')
+		next(csv_reader)
+		for row in csv_reader:
+			opportunity = {}
+			opportunity['institution'] = row[0]
+			opportunity['site_name'] = row[1]
+			opportunity['site_url'] = row[2]
+			opportunity['contact_name'] = row[8]
+			opportunity['contact_email'] = row[9]
+			opportunity['keywords'] = row[13]
+			opportunities.append(opportunity)
+	return opportunities
+
 if __name__ == "__main__":
 	filename = sys.argv[1]
+	opportunities = get_opportunities()
+	print(opportunities)
 	keywords = find_keywords(filename)
 	print(keywords)
